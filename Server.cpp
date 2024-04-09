@@ -170,14 +170,16 @@ int main(void) {
                     newClientSocket->Write(msg_to_client);
                 }
         }
+      
+    }
      catch (const std::exception &e)
     {
         // Handle std::exception and its subclasses
         std::cerr << "Standard exception caught: " << e.what() << std::endl;
     }
-     std::cout << "End of main" << std::endl;
+      std::cout << "End of main" << std::endl;
         for (int i=0;i<clientSockets.size();i++)
             delete clientSockets[i];
-        }
   
+    return 0;
 }
